@@ -93,7 +93,7 @@ def generate_graphs(df, output_dir="graphs/"):
         plt.savefig(f"{output_dir}gender_distribution.png")
         plt.close()
 
-    # Répartition des académies
+    # Répartition des enseignants par académie
     academy_col = next((col for col in df.columns if "académie" in col.lower()), None)
     if academy_col:
         plt.figure(figsize=(10, 5))
@@ -101,19 +101,21 @@ def generate_graphs(df, output_dir="graphs/"):
         plt.title("Répartition des enseignants par académie")
         plt.xlabel("Académie")
         plt.ylabel("Nombre de répondants")
-        plt.xticks(rotation=45, ha="right")  # Rotation des labels pour plus de lisibilité
+        plt.xticks(rotation=45, ha="right", fontsize=8)
+        plt.tight_layout()
         plt.savefig(f"{output_dir}academy_distribution.png")
         plt.close()
 
     # Répartition des statuts professionnels
     status_col = next((col for col in df.columns if "statut actuel" in col.lower()), None)
     if status_col:
-        plt.figure(figsize=(8, 5))
+        plt.figure(figsize=(10, 5))
         df[status_col].value_counts().plot(kind='bar', color='orange')
         plt.title("Répartition des statuts des enseignants")
         plt.xlabel("Statut")
         plt.ylabel("Nombre de répondants")
-        plt.xticks(rotation=45, ha="right")  # Rotation des labels
+        plt.xticks(rotation=45, ha="right", fontsize=8)
+        plt.tight_layout()
         plt.savefig(f"{output_dir}status_distribution.png")
         plt.close()
 
