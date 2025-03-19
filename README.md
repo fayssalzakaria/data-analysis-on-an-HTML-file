@@ -1,68 +1,59 @@
-# Analyse de Fichier HTML de Sondage et Exportation en Excel
+# Analyse de Données sur un Fichier HTML
 
-Ce projet permet d'extraire des données à partir d'un fichier HTML contenant des résultats de sondage, d'effectuer une analyse statistique et de générer un fichier Excel contenant les données traitées ainsi que des graphiques.
+Ce projet analyse un fichier HTML contenant des réponses à un questionnaire et génère des statistiques détaillées sous forme de graphiques et d'un rapport PDF.
 
-##   Fonctionnalités
+##  Fonctionnalités
+- Extraction et parsing du fichier HTML
+- Calcul de statistiques classiques et avancées
+- Génération de graphiques de visualisation
+- Export des résultats en fichier Excel et PDF
 
-- Extraction des réponses du sondage à partir d'un fichier HTML
-- Calcul de statistiques avancées sur les données
-- Génération de graphiques pour une meilleure visualisation
-- Exportation des résultats sous format Excel (`.xlsx`)
-
-##   Structure du Projet
-
+##  Structure du projet
 ```
-  data-analysis-on-an-HTML-file
-├── 📄 main.py           # Script principal
-├── 📄 parser.py         # Extraction des données HTML
-├── 📄 stats.py          # Calcul des statistiques et génération de graphiques
-├── 📄 export.py         # Exportation des données et statistiques en Excel
-├── 📄 requirements.txt  # Dépendances du projet
-├──   graphs/           # Dossier contenant les graphiques générés
-│   ├── age_distribution.png
-│   ├── gender_distribution.png
-│   ├── academy_distribution.png
-│   ├── status_distribution.png
-│   └── ... (autres graphiques)
-├──   data/             # Dossier contenant les fichiers de données
-│   ├── fichierhtml.html  # Exemple de fichier HTML à analyser
-│   ├── resultats.xlsx    # Fichier Excel généré après analyse
+📁 data-analysis-on-an-HTML-file
+│-- main.py          # Programme principal
+│-- parser.py        # Extraction des données depuis le HTML
+│-- stats.py         # Calcul des statistiques de base
+│-- advanced_stats.py # Calcul des statistiques avancées
+│-- export.py        # Export des résultats en Excel et PDF
+│-- graphs/          # Dossier contenant les graphiques générés
+│-- output/          # Dossier contenant les fichiers exportés
+│   ├── report.pdf   # Rapport PDF généré
 ```
 
-##    Installation
+##  Installation
+### 1 Cloner le dépôt
+```bash
+git clone https://github.com/votre-repo/data-analysis-on-an-HTML-file.git
+cd data-analysis-on-an-HTML-file
+```
+### 2 Installer les dépendances
+```bash
+pip install -r requirements.txt
+```
 
-1. **Cloner le projet**
-   ```bash
-   git clone https://github.com/ton-repo/data-analysis-on-an-HTML-file.git
-   cd data-analysis-on-an-HTML-file
-   ```
-
-2. **Installer les dépendances**
-   Assurez-vous d'avoir Python installé, puis exécutez :
-   ```bash
-   pip install -r requirements.txt
-   ```
+##  Dépendances
+Le projet utilise les bibliothèques suivantes :
+```
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+plotly
+beautifulsoup4
+fpdf
+```
 
 ##   Utilisation
-
-Pour exécuter le script, utilisez la commande suivante :
+Exécuter le script principal en fournissant le fichier HTML d'entrée et les fichiers de sortie :
 ```bash
-python3 main.py fichierhtml.html resultats.xlsx
+python main.py input.html output.xlsx --output_pdf output/report.pdf
 ```
 
-- `fichierhtml.html` : Le fichier HTML contenant les réponses du sondage
-- `resultats.xlsx` : Le fichier Excel où seront exportés les résultats
+##   Rapport Généré
 
-## 📊 Statistiques Générées
-
-Le programme analyse les données et génère les statistiques suivantes :
-- Moyenne, médiane et écart-type de l'âge
-- Temps moyen de réponse
-- Répartition par genre, académie et statut professionnel
-
-Des graphiques sont également générés dans le dossier `graphs/`.
+Le rapport généré est disponible ici : [output/report.pdf](output/report.pdf)
 
 ##   Auteur
-
-**Fayssal Zakaria**  
-Email : [fayssal.132004@gmail.com](mailto:fayssal.132004@gmail.com)
+Fayssal Zakaria
