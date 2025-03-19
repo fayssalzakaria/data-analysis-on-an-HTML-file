@@ -53,7 +53,7 @@ python main.py input.html output.xlsx --output_pdf output/report.pdf
 
 ##   Rapport Généré
 
-Le rapport généré est disponible ici : [output/report.pdf](output/report.pdf)
+Le rapport généré est disponible ici : [report.pdf](report.pdf)
 
 ##   Auteur
 Fayssal Zakaria
