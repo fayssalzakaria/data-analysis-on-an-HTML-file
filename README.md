@@ -50,6 +50,28 @@ Exécuter le script principal en fournissant le fichier HTML d'entrée et les fi
 ```bash
 python main.py input.html output.xlsx --output_pdf output/report.pdf
 ```
+## 📊 Visualisations
+
+### 📌 Répartition par académie  
+<img src="./graphs/academy_distribution.png" alt="academy_distribution" width="400"/>
+
+### 📌 Boxplot de l'âge  
+<img src="./graphs/age_boxplot.png" alt="age_boxplot" width="400"/>
+
+### 📌 Répartition des âges  
+<img src="./graphs/age_distribution.png" alt="age_distribution" width="400"/>
+
+### 📌 Matrice de corrélation  
+<img src="./graphs/correlation_matrix.png" alt="correlation_matrix" width="400"/>
+
+### 📌 Répartition par genre  
+<img src="./graphs/gender_distribution.png" alt="gender_distribution" width="400"/>
+
+### 📌 Répartition des temps de réponse  
+<img src="./graphs/response_time_distribution.png" alt="response_time_distribution" width="400"/>
+
+### 📌 Répartition des statuts  
+<img src="./graphs/status_distribution.png" alt="status_distribution" width="400"/>
 
 ##   Rapport Généré
 
