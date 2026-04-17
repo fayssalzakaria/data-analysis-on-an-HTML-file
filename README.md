@@ -1,4 +1,4 @@
-# Analyse de Données sur un Fichier HTML
+# Analyse de Données sur un Sonsage sous format html
 
 Ce projet analyse un fichier HTML contenant des réponses à un questionnaire et génère des statistiques détaillées sous forme de graphiques et d'un rapport PDF.
 
